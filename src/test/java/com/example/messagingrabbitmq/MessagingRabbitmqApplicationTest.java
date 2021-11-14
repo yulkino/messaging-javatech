@@ -43,7 +43,7 @@ public class MessagingRabbitmqApplicationTest {
 		try {
 			rabbitTemplate.convertAndSend(MessagingRabbitmqApplication.queueName,
 					"Hello from RabbitMQ!");
-			receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
+			//receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
 		}
 		catch (AmqpConnectException e) {
 			// ignore - rabbit is not running
